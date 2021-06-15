@@ -48,6 +48,15 @@ p {
   color: #272142;
 }
 
+.logo {
+  width: 100px !important;
+  height: auto;
+}
+
+.mt-5 {
+  margin-top: 1rem !important;
+}
+
 .hero h2 {
   font-family: var(--default-font-family);
   font-weight: normal;
@@ -134,6 +143,11 @@ footer .social-links a {
 }
 
 footer .social-links a:hover {
+  color: white;
+  background-color: var(--branding-color);
+}
+
+.project-button:hover {
   color: white;
   background-color: var(--branding-color);
 }
