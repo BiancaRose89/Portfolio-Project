@@ -13,7 +13,6 @@ h5,
 h6 {
   font-family: var(--heading-font-family);
   font-weight: bold;
-  color: black;
 }
 
 h1 {
@@ -36,25 +35,73 @@ p {
 }
 
 .hero {
-  background-color: var(--secondary-color);
+  background: linear-gradient(
+    68.6deg,
+    rgb(252, 165, 241) 1.8%,
+    rgb(181, 255, 255) 100.5%
+  );
+  background-size: 100%;
   text-align: center;
-  padding: 160px 20px;
+  padding: 80px 10px;
+  max-width: 100%;
+  opacity: 0.9;
+}
+
+.bg-light {
+  background-color: white !important;
+}
+
+.hero h1 {
+  color: white;
+  text-shadow: 2px 4px 4px black;
+}
+
+.hero h3 {
+  color: black;
+  text-shadow: 2px 4px 4px white;
 }
 
 .hero p {
-  font-size: 36px;
+  font-size: 18px;
   font-weight: bold;
   margin: 0;
-  color: #272142;
+  color: white;
+  text-shadow: 2px 4px 4px black;
 }
 
 .logo {
-  width: 100px !important;
-  height: auto;
+  width: 100px;
+}
+
+.contact-me {
+  background-color: white;
+}
+
+.contact-me:hover {
+  background-color: grey;
+  color: white;
 }
 
 .mt-5 {
   margin-top: 1rem !important;
+}
+
+.project-heading {
+  text-align: center;
+}
+
+.img-fluid.home-page {
+  height: 90%;
+  width: 90%;
+}
+
+.img-fluid.work-page {
+  height: 60%;
+  width: 90%;
+}
+
+.image-laptop {
+  max-width: 10px;
 }
 
 .hero h2 {
@@ -65,12 +112,16 @@ p {
 }
 
 .content-container {
-  padding: 100px 20px;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  max-width: 100%;
 }
 
 .content h1 {
-  font-size: 64px;
+  font-size: 52px;
   line-height: 80px;
+  margin: 20px auto;
+  text-align: center;
 }
 
 .content h2 {
@@ -97,6 +148,18 @@ p {
   padding: 15px 30px;
 }
 
+.img-fluid.mb-3.rounded.yogurt-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.img-fluid.mb-3.rounded.weather-image {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  height: 63%;
+}
+
 .btn-branding-outline {
   color: var(--branding-color);
   border: 1px solid var(--branding-color);
@@ -106,8 +169,25 @@ p {
   padding: 15px 30px;
 }
 
+.btn-branding-outline:hover {
+  background-color: grey;
+  color: white;
+}
+
+.btn-branding-outline.work-yogurt-button,
+.btn-branding-outline.work-weather-button,
+.btn-branding-outline.work-dictionary-button {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+}
+
 .project-description {
   padding: 120px 60px;
+}
+
+p.text-muted {
+  color: white !important;
 }
 
 footer .email-link {
@@ -124,30 +204,27 @@ footer {
   margin: 30px 0;
 }
 footer .contact-box {
-  background-color: var(--secondary-color);
-  padding: 30px;
+  background: linear-gradient(
+    68.6deg,
+    rgb(252, 165, 241) 1.8%,
+    rgb(181, 255, 255) 100.5%
+  );
+  padding: 60px;
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 
-footer .contact-box p {
-  margin: 0;
-}
 footer .social-links a {
-  margin: 0 20px;
+  margin: 10px 20px;
   color: var(--branding-color);
   background-color: var(--secondary-color);
   padding: 10px 14px;
-  font-size: 18px;
-  border-radius: 40px;
+  font-size: 24px;
+  border-radius: 50%;
   transition: all 150ms ease-in-out;
 }
 
 footer .social-links a:hover {
-  color: white;
-  background-color: var(--branding-color);
-}
-
-.project-button:hover {
   color: white;
   background-color: var(--branding-color);
 }
@@ -159,7 +236,7 @@ footer .social-links a:hover {
   }
 
   .hero {
-    padding: 80px 20px;
+    padding: 40px 20px;
   }
 
   .content {
@@ -171,10 +248,48 @@ footer .social-links a:hover {
     font-size: 44px;
   }
 
-  .project-description {
+  .weather-project-description,
+  .yogurt-project-description,
+  .dictionary-project-description {
     padding: 0;
     text-align: center;
   }
+
+  .row > * {
+    width: 100% !important;
+  }
+  .img-fluid.yogurt-image,
+  .img-fluid.weather-image,
+  .img-fluid.dictionary-image {
+    display: none;
+  }
+
+  .btn-branding-outline.work-yogurt-button,
+  .btn-branding-outline.work-weather-button,
+  .btn-branding-outline.work-dictionary-button {
+    display: block;
+    margin: 0 auto;
+
+    font-size: 12px;
+  }
+}
+
+.row > * {
+  width: 33.3%;
+  max-width: 100%;
+}
+
+.img-fluid.yogurt-image,
+.img-fluid.weather-image,
+.img-fluid.dictionary-image {
+  width: 50vw;
+  height: 18vw;
+}
+
+.text-center.text-muted.yogurt-project-description,
+.text-center.text-muted.weather-project-description,
+.text-center.text-muted.dictionary-project-description {
+  color: black !important;
 }
 
 .active {
@@ -183,4 +298,34 @@ footer .social-links a:hover {
 
 .nav-item {
   padding: 0 10px;
+  background-color: white;
+}
+
+.descrip.mb-5 {
+  color: white;
+  text-shadow: 2px 4px 4px black;
+}
+
+.text-center.m-0.project-name {
+  color: white;
+  text-shadow: 2px 4px 4px black;
+  padding-bottom: 10px;
+}
+
+.ml12 {
+  font-weight: 200;
+  font-size: 1.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+}
+
+.ml12 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.featured {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
