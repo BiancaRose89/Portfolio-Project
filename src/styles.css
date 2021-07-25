@@ -82,6 +82,27 @@ p {
   color: white;
 }
 
+h1.name {
+  font-size: 32px;
+  color: black;
+}
+
+h2.position {
+  font-size: 20px;
+  color: lightslategray;
+}
+
+p.description {
+  font-size: 16px;
+  color: lightslategray;
+}
+
+div.personal-info {
+  position: relative;
+  top: 40%;
+  transform: translateY(-40%);
+}
+
 .mt-5 {
   margin-top: 1rem !important;
 }
@@ -98,6 +119,16 @@ p {
 .img-fluid.work-page {
   height: 60%;
   width: 90%;
+}
+
+div.personal-image {
+  width: 50%;
+  height: 50%;
+  margin: 30px 40px 0 0;
+}
+
+div.personal-info {
+  margin: 10px 0px 10px 120px;
 }
 
 .image-laptop {
@@ -191,6 +222,7 @@ p.text-muted {
 }
 
 footer .email-link {
+  margin: 10px 0 0 0;
   text-decoration: none;
   color: black;
   font-size: 24px;
@@ -214,8 +246,13 @@ footer .contact-box {
   margin-bottom: 20px;
 }
 
+footer.d-flex.justify-content-center.mb-2.mt-3,
+.contact-links {
+  background: white;
+}
+
 footer .social-links a {
-  margin: 10px 20px;
+  margin: 0px 10px 20px;
   color: var(--branding-color);
   background-color: var(--secondary-color);
   padding: 10px 14px;
@@ -226,52 +263,11 @@ footer .social-links a {
 
 footer .social-links a:hover {
   color: white;
-  background-color: var(--branding-color);
-}
-
-@media (max-width: 900px) {
-  h1 {
-    font-size: 44px;
-    line-height: 2;
-  }
-
-  .hero {
-    padding: 40px 20px;
-  }
-
-  .content {
-    text-align: center;
-    padding: 0;
-  }
-
-  h2 {
-    font-size: 44px;
-  }
-
-  .weather-project-description,
-  .yogurt-project-description,
-  .dictionary-project-description {
-    padding: 0;
-    text-align: center;
-  }
-
-  .row > * {
-    width: 100% !important;
-  }
-  .img-fluid.yogurt-image,
-  .img-fluid.weather-image,
-  .img-fluid.dictionary-image {
-    display: none;
-  }
-
-  .btn-branding-outline.work-yogurt-button,
-  .btn-branding-outline.work-weather-button,
-  .btn-branding-outline.work-dictionary-button {
-    display: block;
-    margin: 0 auto;
-
-    font-size: 12px;
-  }
+  background: linear-gradient(
+    68.6deg,
+    rgb(252, 165, 241) 1.8%,
+    rgb(181, 255, 255) 100.5%
+  );
 }
 
 .row > * {
@@ -328,4 +324,63 @@ footer .social-links a:hover {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 44px;
+    line-height: 2;
+  }
+
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .content {
+    text-align: center;
+    padding: 0;
+  }
+
+  h2 {
+    font-size: 44px;
+  }
+
+  .weather-project-description,
+  .yogurt-project-description,
+  .dictionary-project-description {
+    padding: 0;
+    text-align: center;
+  }
+
+  .row > * {
+    width: 100% !important;
+  }
+
+  .img-fluid.yogurt-image,
+  .img-fluid.weather-image,
+  .img-fluid.dictionary-image {
+    display: none;
+  }
+
+  .btn-branding-outline.work-yogurt-button,
+  .btn-branding-outline.work-weather-button,
+  .btn-branding-outline.work-dictionary-button {
+    display: block;
+    margin: 0 auto;
+
+    font-size: 12px;
+  }
+
+  div.personal-image {
+    display: none;
+  }
+
+  div.personal-info {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  div.col.about-image {
+    display: none;
+  }
 }
