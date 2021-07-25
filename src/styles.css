@@ -51,6 +51,15 @@ p {
   background-color: white !important;
 }
 
+h1.name,
+h2.position,
+.text-center.mt-3.project-name,
+h3 {
+  font-size: 20px;
+  color: white;
+  text-shadow: 2px 4px 4px black;
+}
+
 .hero h1 {
   color: white;
   text-shadow: 2px 4px 4px black;
@@ -324,6 +333,16 @@ footer .social-links a:hover {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.content-container.container.contact-me-page {
+  text-align: center;
+  margin-bottom: 60px;
+  background: linear-gradient(
+    68.6deg,
+    rgb(252, 165, 241) 1.8%,
+    rgb(181, 255, 255) 100.5%
+  );
 }
 
 @media (max-width: 900px) {
